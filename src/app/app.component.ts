@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'game-assignment';
+  oddNumbers : number[] = [];
+  evenNumbers : number[] = [];
+
+  onEventReceive(event: number) {
+    if (event % 2 === 0) this.evenNumbers.push(event);
+    else this.oddNumbers.push(event);
+  }
 }
